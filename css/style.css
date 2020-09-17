@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-body {
+    padding: 2rem;
+}
+.output {
+    margin-top: 1rem;
+}

@@ -9,19 +9,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"
         integrity="sha512-pUhApVQtLbnpLtJn6DuzDD5o2xtmLJnJ7oBoMsBnzOkVkpqofGLGPaBJ6ayD2zQe3lCgCibhJBi4cj5wAxwVKA=="
         crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="app">
-        <h1>{{ title }}</h1>
-        <div>
-            <input type="text" placeholder="Type to generate the QRCode..." :value="text" @input="forData">
-        </div>
-        <div v-if="text" class="output">
-            <img :src="newQRcode" alt="QRCode">
+    <div class="card">
+        <div class="card-body" class="container">
+            <div id="app" class="container">
+                <h1>{{ title }}</h1>
+                <hr>
+                <div>
+                    <input class="form-control" type="text" placeholder="Type to generate the QRCode..." :value="text"
+                        @input="forData">
+                </div>
+                <div v-if="text" class="output container">
+                    <img :src="newQRcode" alt="QRCode">
+                </div>
+            </div>
         </div>
     </div>
+
     <script>
         new Vue({
             el: '#app',
